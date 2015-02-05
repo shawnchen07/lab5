@@ -5,6 +5,18 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$(".friendName").click(friendFunction);
+
+function friendFunction(e) {
+	// console.log("friend function...");
+	e.preventDefault();
+	var current = $(this).text();
+	// console.log("current:"+current);
+	var anagram = anagrammedName(current);
+	// console.log("anagram: "+anagram);
+	$(this).text(anagram);
+}
+
 /*
  * Function that is called when the document is ready.
  */
